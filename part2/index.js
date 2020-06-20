@@ -7,7 +7,7 @@ const onesplitAddress = "0xC586BeF4a0992C495Cf22e1aeEE4E446CECDee0E"; // 1plit c
 const erc20ABI = require('./abis/erc20.json');
 const daiAddress = "0x6b175474e89094c44da98b954eedeac495271d0f";
 
-const fromAddress = "0x4d10ae710Bd8D1C31bd7465c8CBC3add6F279E81";
+const fromAddress = "0x78bc49be7bae5e0eec08780c86f0e8278b8b035b";
 
 const fromToken = daiAddress;
 const fromTokenDecimals = 18;
@@ -18,7 +18,6 @@ const toTokenDecimals = 18;
 const amountToExchange = new BigNumber(1000);
 
 const web3 = new Web3(new Web3.providers.HttpProvider('http://127.0.0.1:8545', { timeout: 20000000 }));
-web3.setProvider(new Web3.providers.HttpProvider("https://mainnet.infura.io/v3/1250bc005f6d4d6cbedb2c8b77f1e0aa"))
 
 const onesplitContract = new web3.eth.Contract(oneSplitABI, onesplitAddress);
 const daiToken = new web3.eth.Contract(erc20ABI, fromToken);

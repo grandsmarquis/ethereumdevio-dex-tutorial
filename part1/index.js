@@ -17,19 +17,30 @@ const web3 = new Web3('http://127.0.0.1:8545');
 const onesplitContract = new web3.eth.Contract(oneSplitABI, onesplitAddress);
 
 const oneSplitDexes = [
-    "Uniswap",
-    "Kyber",
-    "Bancor",
-    "Oasis",
-    "CurveCompound",
-    "CurveUsdt",
-    "CurveY",
-    "Binance",
-    "Synthetix",
-    "UniswapCompound",
-    "UniswapChai",
-    "UniswapAave"
-]
+  "Uniswap",
+  "Kyber",
+  "Bancor",
+  "Oasis",
+  "Curve Compound",
+  "Curve USDT",
+  "Curve Y",
+  "Curve Binance",
+  "Curve Synthetix",
+  "Uniswap Compound",
+  "Uniswap CHAI",
+  "Uniswap Aave",
+  "Mooniswap",
+  "Uniswap V2",
+  "Uniswap V2 ETH",
+  "Uniswap V2 DAI",
+  "Uniswap V2 USDC",
+  "Curve Pax",
+  "Curve renBTC",
+  "Curve tBTC",
+  "Dforce XSwap",
+  "Shell",
+  "mStable mUSD"
+];
 
 
 onesplitContract.methods.getExpectedReturn(fromToken, toToken, new BigNumber(amountToExchange).shiftedBy(fromTokenDecimals).toString(), 100, 0).call({ from: '0x9759A6Ac90977b93B58547b4A71c78317f391A28' }, function (error, result) {

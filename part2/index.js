@@ -23,19 +23,30 @@ const onesplitContract = new web3.eth.Contract(oneSplitABI, onesplitAddress);
 const daiToken = new web3.eth.Contract(erc20ABI, fromToken);
 
 const oneSplitDexes = [
-    "Uniswap",
-    "Kyber",
-    "Bancor",
-    "Oasis",
-    "CurveCompound",
-    "CurveUsdt",
-    "CurveY",
-    "Binance",
-    "Synthetix",
-    "UniswapCompound",
-    "UniswapChai",
-    "UniswapAave"
-]
+  "Uniswap",
+  "Kyber",
+  "Bancor",
+  "Oasis",
+  "Curve Compound",
+  "Curve USDT",
+  "Curve Y",
+  "Curve Binance",
+  "Curve Synthetix",
+  "Uniswap Compound",
+  "Uniswap CHAI",
+  "Uniswap Aave",
+  "Mooniswap",
+  "Uniswap V2",
+  "Uniswap V2 ETH",
+  "Uniswap V2 DAI",
+  "Uniswap V2 USDC",
+  "Curve Pax",
+  "Curve renBTC",
+  "Curve tBTC",
+  "Dforce XSwap",
+  "Shell",
+  "mStable mUSD"
+];
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
